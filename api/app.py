@@ -4,8 +4,6 @@ from collections import OrderedDict
 import operator, urllib, sys, tinys3
 from boto.s3.connection import S3Connection
 
-
-
 APIKEY = { 'key': '7ab1c5c2151720f0b4104d7a9a2d7b9f'}
 S3_ACCESS_KEY = "AKIAJ2EIURX2ZI3SQNPA"
 S3_SECRET_KEY = "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"
@@ -70,7 +68,7 @@ def setSubscriptions():
             os.remove(filename)
     return Response(status = 200)
 
-@app.route("/createAccount", methods = ['POST']) #username, body
+@app.route("/createAccount", methods = ['POST']) #username, body (customerID)
 def createAccount():
     username = getJSON(request.data).get("username")
     body =  getJSON(request.data)
