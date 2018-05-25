@@ -8,7 +8,9 @@
     <title>subStop - Sign Up</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
+
     
 </head>
 
@@ -33,12 +35,17 @@
                             </div>
                             <div class="field">
                                     <div class="control">
-                                        <input class="input is-medium" type="accountnumber" placeholder="Account Number">
+                                        <input class="input is-medium" type="phonenumber" id="phonenumberField" placeholder="Phone Number">
                                     </div>
                             </div>
                             <div class="field">
                                     <div class="control">
-                                        <input class="input is-medium" type="userName" placeholder="Username">
+                                        <input class="input is-medium" type="accountnumber" id="customerNum" placeholder="Account Number">
+                                    </div>
+                            </div>
+                            <div class="field">
+                                    <div class="control">
+                                        <input class="input is-medium" type="userName" id="usernameField" placeholder="Username">
                                     </div>
                             </div>
                             <div class="field">
@@ -48,7 +55,7 @@
                             </div>
                         
                             </div>
-                            <a class="button is-primariy is-info is-medium is-fullwidth" href="thank-you.html">Sign Up</a>
+                            <a class="button is-primariy is-info is-medium is-fullwidth" onclick = "createAccount()" href="thank-you.html">Sign Up</a>
                 
                         </form>
                     </div>
